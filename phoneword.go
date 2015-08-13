@@ -35,7 +35,7 @@ func wordToNumber(word string) string {
 }
 
 func main() {
-	for _, arg := range os.Args {
+	for _, arg := range os.Args[1:] {
 		fmt.Println(wordToNumber(arg))
 	}
 }
