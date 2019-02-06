@@ -10,23 +10,27 @@ func wordToNumber(word string) string {
 	var num string
 	for _, rune := range strings.ToLower(word) {
 		switch rune {
-		case ' ':
+		default:
+			num += "*"
+		case ' ', '0':
 			num += "0"
-		case 'a', 'b', 'c':
+		case '1':
+			num += "1"
+		case 'a', 'b', 'c', '2':
 			num += "2"
-		case 'd', 'e', 'f':
+		case 'd', 'e', 'f', '3':
 			num += "3"
-		case 'g', 'h', 'i':
+		case 'g', 'h', 'i', '4':
 			num += "4"
-		case 'j', 'k', 'l':
+		case 'j', 'k', 'l', '5':
 			num += "5"
-		case 'm', 'n', 'o':
+		case 'm', 'n', 'o', '6':
 			num += "6"
-		case 'p', 'q', 'r', 's':
+		case 'p', 'q', 'r', 's', '7':
 			num += "7"
-		case 't', 'u', 'v':
+		case 't', 'u', 'v', '8':
 			num += "8"
-		case 'w', 'x', 'y', 'z':
+		case 'w', 'x', 'y', 'z', '9':
 			num += "9"
 		}
 	}
